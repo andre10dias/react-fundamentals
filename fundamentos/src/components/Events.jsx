@@ -7,8 +7,21 @@ const Events = () => {
 
     return (
         <div>
-            <h1>Eventos em React</h1>
-            <button onClick={handleClick}>Clique aqui</button>
+            <div>
+                <button onClick={handleClick}>Clique aqui</button>
+            </div>
+            <div>
+                <button onClick={() => console.log("Eventos inline")}>Clique aqui tanbém</button>
+            </div>
+            <div>
+                <button 
+                    onClick={() => {
+                        if (true) {
+                            console.log("Isso não deveria existir =)");
+                        }
+                    }}
+                >Clique aqui, por favor</button>
+            </div>
         </div>
     );
 }
