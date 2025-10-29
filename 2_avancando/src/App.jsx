@@ -6,6 +6,7 @@ import './App.css'
  * o caminho correto para a imagem na aplicação final.
  */
 import City from './assets/city.jpg'
+import ManagedData from './component/ManagedData'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <div>
         <img src={City} alt="Cidade" />
       </div>
+      <ManagedData />
     </>
   )
 }
