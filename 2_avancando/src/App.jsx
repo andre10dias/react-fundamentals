@@ -12,6 +12,7 @@ import ManagedData from './component/ManagedData'
 import ListRender from './component/ListRender'
 import ConditionalRender from './component/ConditionalRender'
 import ShowUsername from './component/ShowUsername'
+import CarDetails from './component/CarDetails'
 
 function App() {
   const name = "Joaquim";
@@ -36,6 +37,8 @@ function App() {
       {/* <ShowUsername name="João" /> */}
       {/* <ShowUsername name={name} /> */}
       <ShowUsername name={username} />
+      {/* destructuring */}
+      <CarDetails brand="Fiat" km={10000} color="Preto" />
     </>
   )
 }
