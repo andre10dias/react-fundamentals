@@ -38,7 +38,10 @@ function App() {
       {/* <ShowUsername name={name} /> */}
       <ShowUsername name={username} />
       {/* destructuring */}
-      <CarDetails brand="Fiat" km={10000} color="Preto" />
+      <CarDetails brand="Fiat" km={10000} color="Preto" newCar={false} />
+      {/* reaproveitamento */}
+      <CarDetails brand="Ford" km={20000} color="Azul" newCar={true} />
+      <CarDetails brand="Chevrolet" km={30000} color="Vermelho" newCar={false} />
     </>
   )
 }
