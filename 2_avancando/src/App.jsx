@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import './App.css'
 
 /**
@@ -9,8 +11,12 @@ import City from './assets/city.jpg'
 import ManagedData from './component/ManagedData'
 import ListRender from './component/ListRender'
 import ConditionalRender from './component/ConditionalRender'
+import ShowUsername from './component/ShowUsername'
 
 function App() {
+  const name = "Joaquim";
+  const [username] = useState("Maria");
+
   return (
     <>
       <h1>Avançando em React</h1>
@@ -25,6 +31,11 @@ function App() {
       <ManagedData />
       <ListRender />
       <ConditionalRender />
+      {/* Enviando dados do componente pai para o filho */}
+      {/* props */}
+      {/* <ShowUsername name="João" /> */}
+      {/* <ShowUsername name={name} /> */}
+      <ShowUsername name={username} />
     </>
   )
 }
