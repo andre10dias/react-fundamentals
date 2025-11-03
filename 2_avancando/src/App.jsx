@@ -16,6 +16,8 @@ import CarDetails from './component/CarDetails'
 import Fragment from './component/Fragment'
 import Container from './component/Container'
 import ExecuteFunction from './component/ExecuteFunction'
+import Message from './component/Message'
+import ChangeMessageState from './component/ChangeMessageState'
 
 function App() {
   const name = "Joaquim";
@@ -30,6 +32,11 @@ function App() {
   function showMessage() {
     console.log("Evento do componente pai!");
     alert("Executando evento do componente pai pelo componente filho.");
+  }
+
+  const [message, setMessage] = useState("");
+  const handleMessage = (msg) => {
+    setMessage(msg);
   }
 
   return (
@@ -78,6 +85,17 @@ function App() {
 
       {/* Executando função do componente pai */}
       <ExecuteFunction myFunction={showMessage} />
+
+      {/**
+       * Elevação de state (Lifting State Up)
+       * 
+       * É quando um valor é elevado do componente filho para o componente pai;
+       * Geralmente temos um componente que usa o state e outro que o altera;
+       * Então, precisamos passar a alteração para o componente pai, e este passa 
+       * para o componente que usa o state;
+       *  */}
+       <Message msg={message} />
+        <ChangeMessageState handleMessage={handleMessage} />
     </>
   )
 }
