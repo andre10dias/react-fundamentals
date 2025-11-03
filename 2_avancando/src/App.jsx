@@ -15,6 +15,7 @@ import ShowUsername from './component/ShowUsername'
 import CarDetails from './component/CarDetails'
 import Fragment from './component/Fragment'
 import Container from './component/Container'
+import ExecuteFunction from './component/ExecuteFunction'
 
 function App() {
   const name = "Joaquim";
@@ -25,6 +26,11 @@ function App() {
     {id: 2, brand: "Ford", km: 20000, color: "Azul", newCar: true},
     {id: 3, brand: "Chevrolet", km: 30000, color: "Vermelho", newCar: false},
   ]
+
+  function showMessage() {
+    console.log("Evento do componente pai!");
+    alert("Executando evento do componente pai pelo componente filho.");
+  }
 
   return (
     <>
@@ -69,6 +75,9 @@ function App() {
         {/* Conteúdo do componente filho criado no componente pai */}
         <p>Este é o conteúdo do container</p>
       </Container>
+
+      {/* Executando função do componente pai */}
+      <ExecuteFunction myFunction={showMessage} />
     </>
   )
 }
