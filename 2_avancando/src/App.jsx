@@ -13,6 +13,8 @@ import ListRender from './component/ListRender'
 import ConditionalRender from './component/ConditionalRender'
 import ShowUsername from './component/ShowUsername'
 import CarDetails from './component/CarDetails'
+import Fragment from './component/Fragment'
+import Container from './component/Container'
 
 function App() {
   const name = "Joaquim";
@@ -58,6 +60,15 @@ function App() {
           color={car.color} 
           newCar={car.newCar} />
       )}
+
+      {/* Fragment */}
+      <Fragment propFragment="Teste" />
+
+      {/* Children */}
+      <Container value="Testing">
+        {/* Conteúdo do componente filho criado no componente pai */}
+        <p>Este é o conteúdo do container</p>
+      </Container>
     </>
   )
 }
