@@ -18,6 +18,12 @@ function App() {
   const name = "Joaquim";
   const [username] = useState("Maria");
 
+  const cars = [
+    {id: 1, brand: "Fiat", km: 10000, color: "Preto", newCar: false},
+    {id: 2, brand: "Ford", km: 20000, color: "Azul", newCar: true},
+    {id: 3, brand: "Chevrolet", km: 30000, color: "Vermelho", newCar: false},
+  ]
+
   return (
     <>
       <h1>Avançando em React</h1>
@@ -42,6 +48,16 @@ function App() {
       {/* reaproveitamento */}
       <CarDetails brand="Ford" km={20000} color="Azul" newCar={true} />
       <CarDetails brand="Chevrolet" km={30000} color="Vermelho" newCar={false} />
+      {/* array de objetos */}
+      <h1>-- Lista de carros --</h1>
+      {cars.map((car) => 
+        <CarDetails 
+          key={car.id} 
+          brand={car.brand} 
+          km={car.km} 
+          color={car.color} 
+          newCar={car.newCar} />
+      )}
     </>
   )
 }
