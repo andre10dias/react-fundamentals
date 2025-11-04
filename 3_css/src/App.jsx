@@ -9,6 +9,10 @@ function App() {
       {/* css de componente */}
       <MyComponent />
       <p>Este é um parágrafo do App.js</p>
+      {/* Inline CSS */}
+      <p style={{color: 'white', padding: '25px', borderTop: '2px solid red'}}>
+        Elemento estilizado de forma inline
+      </p>
     </>
   )
 }
