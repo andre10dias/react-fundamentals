@@ -1,0 +1,15 @@
+/**
+* Este tipo de abordagem no CSS de componente, 
+* costuma vazar para outros componentes;
+* Evite usar seletores genéricos como "p", "div", "h1", etc.;
+* Use classes ou ids específicos para evitar conflitos.
+*/
+p {
+    color: #06f451;
+    background-color: black;
+}
+
+.my-comp-paragraph {
+    color: black;
+    background-color: gold;
+}
