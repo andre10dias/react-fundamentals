@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import MyComponent from './component/MyComponent'
+import Title from './component/Title';
 
 function App() {
   let [n, setN] = useState(15);
@@ -37,6 +38,7 @@ function App() {
         Este título terá classe dinâmica
       </h2>
       <button onClick={changeStyle}>Change style</button>
+      <Title />
     </>
   )
 }

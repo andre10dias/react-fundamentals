@@ -1,0 +1,14 @@
+/**
+* CSS Modules
+*
+* Restringe o uso de classes CSS 
+* apenas ao componente onde foram importadas;
+* Evita conflitos de nomes entre classes 
+* CSS em diferentes componentes.
+*/
+.my_title {
+    margin-top: 10px;
+    color: orange;
+    background: #111;
+    padding: 10px;
+}
