@@ -9,6 +9,18 @@ h1 {
   color: #f50505;
 }
 
+.red-title {
+  color: #f50505;
+  background-color: #000;
+  padding: 15px;
+  border: 5px solid #f50505;
+}
+
+.blue-title {
+  color: #0000ff;
+  background-color: #ffff00;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -19,14 +31,12 @@ button {
   background-color: #f9f9f9;
   cursor: pointer;
   transition: border-color 0.25s;
+  border-color: #262904;
+  color: #262904;
   width: 100%;
 }
 
 button:hover {
   border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: #646cff;
 }
