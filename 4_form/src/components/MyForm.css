@@ -1,0 +1,21 @@
+form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* input, select, textarea {
+    display: block;
+    margin-top: 10px;
+} */
