@@ -15,20 +15,22 @@ const MyForm = ({user}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Enviando o formulário");
+        console.log("Enviando o formulário...");
         console.log('Nome: ' + name, '\nEmail: ' + email, 
-            '\nMensagem: ' + message);
+            '\nMensagem: ' + message, '\nFunção: ' + role);
         // limpar formulário
         setName('');
         setEmail('');
         setMessage('');
+        setRole('');
     }
 
     // controle de formulário
     const [name, setName] = useState(user ? user.name : '');
     const [email, setEmail] = useState(user ? user.email : '');
 
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState(user ? user.message : '');
+    const [role, setRole] = useState(user ? user.role : '');
 
     return (
         <div>
@@ -65,6 +67,19 @@ const MyForm = ({user}) => {
                         value={message}
                      >
                     </textarea>
+                </label>
+        
+                <label>
+                    <span>Função</span>
+                    <select 
+                        name="role" 
+                        onChange={(e) => setRole(e.target.value)}
+                        value={role}>
+                        <option value=""></option>
+                        <option value="user">Usuário</option>
+                        <option value="editor">Editor</option>
+                        <option value="admin">Administrador</option>
+                    </select>
                 </label>
                 <input type="submit" value="Enviar" />
             </form>
