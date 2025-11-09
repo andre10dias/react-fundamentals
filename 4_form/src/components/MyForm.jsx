@@ -3,8 +3,8 @@ import './MyForm.css'
 
 const MyForm = ({user}) => {
     // gerenciamento de dados
-    // let [name, setName] = useState('');
-    // let [email, setEmail] = useState('');
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
 
     const handleNameChange = (e) => {
         setName(e.target.value);
@@ -16,15 +16,19 @@ const MyForm = ({user}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Enviando o formulário");
-        console.log('Nome: ' + name, '\nEmail: ' + email);
+        console.log('Nome: ' + name, '\nEmail: ' + email, 
+            '\nMensagem: ' + message);
         // limpar formulário
         setName('');
         setEmail('');
+        setMessage('');
     }
 
     // controle de formulário
-    let [name, setName] = useState(user ? user.name : '');
-    let [email, setEmail] = useState(user ? user.email : '');
+    const [name, setName] = useState(user ? user.name : '');
+    const [email, setEmail] = useState(user ? user.email : '');
+
+    const [message, setMessage] = useState('');
 
     return (
         <div>
@@ -50,6 +54,17 @@ const MyForm = ({user}) => {
                         placeholder="Digite o seu email"
                         onChange={e => setEmail(e.target.value)}
                         value={email} />
+                </label>
+
+                <label>
+                    <span>Mensagem:</span>
+                    <textarea 
+                        name="message" 
+                        placeholder='Digite a sua mensagem'
+                        onChange={e => setMessage(e.target.value)}
+                        value={message}
+                     >
+                    </textarea>
                 </label>
                 <input type="submit" value="Enviar" />
             </form>
